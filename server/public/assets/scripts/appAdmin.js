@@ -91,7 +91,7 @@ function createDate(){
 
 function updateDom(array){
     $("#messageBoard").empty();
-    for (var i = 0; i<array.length; i++){
+    for (var i = array.length-1; i>=0; i--){
         console.log(array[i]);
         $("#messageBoard").append("<div class='post' ></div>");
         var $el = $("#messageBoard").children().last();

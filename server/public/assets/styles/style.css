@@ -31,9 +31,16 @@ form {
 h1{
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-    font-size: 48px;
+    font-size: 5.2vw;
 }
 
+button {
+    min-width: 100px;
+}
+
+#headerTag{
+    font-size:2.3vw;
+}
 .button-delete {
     width:20%;
     top: -10px;
