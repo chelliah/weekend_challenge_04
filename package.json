@@ -1,0 +1,20 @@
+{
+  "name": "weekend_challenge_04v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "Aron Thomas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "jquery": "^2.1.4",
+    "mongoose": "^4.2.4",
+    "path": "^0.12.7",
+    "purecss": "^0.6.0"
+  }
+}

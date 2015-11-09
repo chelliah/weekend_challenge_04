@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Board - Aron Thomas Weekend Challenge</title>
+    <link rel="stylesheet" href="/vendors/pure-min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <script type="text/javascript" src="/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+</head>
+<body>
+    <div id ='layout' class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-md-1-4">
+            <h1>Zeta Message Board</h1>
+            <p>Type in a message here</p>
+            <div>
+                <button id="createPost" class="pure-button pure-input-1-2 pure-button">Create a New Post</button>
+            </div>
+            <form id='entryForm' class="pure-form">
+                <fieldset id="entryField" class="pure-group">
+                    <input type="text" class="pure-input-1-2" name="postTitle" placeholder="Enter a Title">
+                    <input type="text" class="pure-input-1-2" name="userName" placeholder="Enter your name">
+                    <textarea id="postText" class="pure-input-1-2" name='postContent' placeholder="Type your message here"></textarea>
+                </fieldset>
+
+                <button id="submit" type="submit" class="pure-button pure-input-1-2 pure-button">Submit</button>
+            </form>
+        </div>
+        <div id="messageBoard" class="content pure-u-1 pure-u-md-3-4"></div>
+    </div>
+</body>
+</html>
