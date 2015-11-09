@@ -1,35 +1,86 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
 html{
     box-sizing: border-box;
+    top:0;
+    bottom:0;
 }
 
 h1,h2,h3,h4,h5,p{
     margin: 0px;
 }
 header {
+
     text-align: center;
 }
 
 form {
     /*display:inline-block;*/
-    /*text-align: center;*/
+    text-align: center;
 
     margin: 0 auto;
 }
 
+h1{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 48px;
+}
 
+#sidebarHeader{
+    font-family: 'open sans',arial,sans-serif;
+    margin: 50px auto;
+    color: #f2f2f2;
+}
+
+#mainContentHeader {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 200;
+    padding-top: 10px;
+    margin: 5px;
+    color: #AAAAAA;
+    font-size:24px;
+    border-bottom: thin solid #AAAAAA;
+}
+
+.sidebar {
+
+    background-color: #40546E;
+    height: 100vh;
+}
+
+#entryForm{
+    padding: 25% 5px;
+}
 
 #messageBoard{
-    margin: 0px 20px;
+    margin: 0px 0px;
 }
 
 .post {
-    margin-top: 5px;
-    border: 1px black solid;
+    margin: 15px 15px;
+    /*border: 1px black solid;*/
 }
 
+
+
 .postHead {
-    padding: 5px;
+    font-family: 'open sans',arial,sans-serif;
     text-align: left;
-    background-color: lightblue;
-    line-height: 150%;
+    /*background-color: lightblue;*/
+}
+
+.name, .date{
+    color:#AAAAAA;
+}
+
+.postContent {
+    padding-top: 5px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
 }

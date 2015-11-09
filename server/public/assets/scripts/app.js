@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#entryForm").hide();
+    //$("#entryForm").hide();
     console.log('hi im on');
     enable();
 });
@@ -9,9 +9,9 @@ function enable(){
 
     getPosts();
 
-    $("#createPost").on('click',function(){
-        $("#entryForm").slideToggle().show();
-    });
+    //$("#createPost").on('click',function(){
+    //    $("#entryForm").slideToggle().show();
+    //});
 
     $('#entryForm').submit(submitPost);
 }
@@ -34,7 +34,7 @@ function submitPost(){
     $("#entryForm").find("input[type=text]").val("");
     $("#postText").val('');
 
-    $(this).slideUp();
+    //$(this).slideUp();
     postMessage(values);
 }
 
@@ -80,11 +80,11 @@ function updateDom(array){
         var $el = $("#messageBoard").children().last();
         $el.append(
             "<header class='postHead'>" +
-                "<h3 class='title'>" + array[i].title +"</h3>" +
-                "<h4 class='name'>By " + array[i].name +"</h4>" +
+                "<h2 class='title'>" + array[i].title +"</h2>" +
+                "<p class='name'>By " + array[i].name +"</p>" +
                 "<p class='date'>Posted on " + array[i].date +"</p>" +
             "</header>" +
-            "<p class='content'>" + array[i].text +"</p>"
+            "<p class='postContent'>" + array[i].text +"</p>"
         )
     }
 }
