@@ -1,3 +1,6 @@
+/**
+ * Created by aronthomas on 11/8/15.
+ */
 $(document).ready(function(){
     //$("#entryForm").hide();
     console.log('hi im on');
@@ -9,11 +12,25 @@ function enable(){
 
     getPosts();
 
-    //$("#createPost").on('click',function(){
-    //    $("#entryForm").slideToggle().show();
-    //});
-
     $('#entryForm').submit(submitPost);
+
+    $('#mainContent').on('click', '.button-delete', deletePost);
+}
+
+
+function deletePost(){
+    var deletedID = {id: $(this).data('id')};
+    console.log(deletedID);
+
+    $.ajax({
+        url: "/admin/data",
+        type: "DELETE",
+        data: deletedID,
+        success: function(data){
+            console.log(data);
+            getPosts();
+        }
+    })
 }
 
 function submitPost(){
@@ -40,7 +57,7 @@ function submitPost(){
 
 function postMessage(values){
     $.ajax({
-        url: "/data",
+        url: "/admin/data",
         type: "POST",
         data: values,
         success: function(data){
@@ -52,7 +69,7 @@ function postMessage(values){
 
 function getPosts(){
     $.ajax({
-        url: "/data",
+        url: "/admin/data",
         type: "GET",
         success: function(data){
             console.log(data);
@@ -79,11 +96,14 @@ function updateDom(array){
         $("#messageBoard").append("<div class='post' ></div>");
         var $el = $("#messageBoard").children().last();
         $el.append(
-            "<header class='postHead'>" +
+            "<div class='postAdmin'>" +
+                "<header class='postHead'>" +
                 "<h2 class='title'>" + array[i].title +"</h2>" +
                 "<p class='name-date'>Posted on " + array[i].date +" by " + array[i].name + "</p>" +
-            "</header>" +
-            "<p class='postContent'>" + array[i].text +"</p>"
+                "</header>" +
+                "<p class='postContent'>" + array[i].text +"</p>" +
+            "</div>" +
+            "<button class='pure-button button-delete' data-id='"+ array[i]._id +"'>Delete</button>"
         )
     }
 }

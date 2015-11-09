@@ -32,24 +32,44 @@ h1{
     font-size: 48px;
 }
 
+.button-delete {
+    width:20%;
+    top: -10px;
+    float:right;
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.postAdmin {
+    width:80%;
+    float: left;
+}
 #sidebarHeader{
     font-family: 'open sans',arial,sans-serif;
     margin: 50px auto;
     color: #f2f2f2;
 }
 
+#mainContent {
+    left: 33%;
+    width:66%;
+    position: relative;
+}
+
 #mainContentHeader {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 200;
     padding-top: 10px;
-    margin: 5px;
+    margin: 5px 5px 5px 15px;
     color: #AAAAAA;
     font-size:24px;
     border-bottom: thin solid #AAAAAA;
 }
 
 .sidebar {
-
+    position:fixed;
     background-color: #40546E;
     height: 100vh;
 }
@@ -75,7 +95,7 @@ h1{
     /*background-color: lightblue;*/
 }
 
-.name, .date{
+.name-date{
     color:#AAAAAA;
 }
 

@@ -1,7 +1,12 @@
+/**
+ * Created by aronthomas on 11/8/15.
+ */
 var express = require('express');
 var path = require('path');
 var bodyParser =require('body-parser');
+var mongoose = require('mongoose');
 var router = express.Router();
+
 
 var mongoose = require('mongoose');
 var postSchema = require('../modules/post');
@@ -13,6 +18,17 @@ router.use(bodyParser.urlencoded({expanded : true}));
 
 
 var Post = mongoose.model('Post', postSchema);
+
+
+router.delete('/data',function(req,res){
+    Post.findByIdAndRemove({"_id" : req.body.id}, function(err,data){
+        if(err){
+            console.log("u errored", err)
+        }
+        res.send(data);
+    });
+
+});
 
 router.post('/data',function(req,res){
     console.log(req.body);
@@ -40,7 +56,7 @@ router.get('/data', function(req,res){
 });
 
 router.get('/*', function(req,res){
-    var file = req.params[0] || 'views/index.html';
+    var file = req.params[0] || 'views/admin.html';
     res.sendFile(path.join(__dirname,"../public",file))
 });
 
